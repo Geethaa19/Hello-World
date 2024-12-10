@@ -5,10 +5,10 @@ import requests
 GITHUB_USERNAME = "Geethaa19"
 REPOSITORY_NAME = "Hello-World"
 TOKEN = input("Enter token")
-BASE_URL = f"https://api.github.com/repos/{GITHUB_USERNAME}/{REPOSITORY_NAME}/wiki"
+BASE_URL = f"https://github.com/{GITHUB_USERNAME}/{REPOSITORY_NAME}/wiki"  
 
 def update_wiki_page(title, content):
-    url = f"{BASE_URL}/{title.replace(' ', '-')}"  # URL for the wiki page
+    url = f"{BASE_URL}/Home"  # URL for the wiki page
     headers = {
         "Authorization": f"Bearer {TOKEN}",
         "Content-Type": "application/json",
