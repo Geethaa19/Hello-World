@@ -3,7 +3,9 @@ import csv
 from git import Repo
 
 # Configuration
-GITLAB_WIKI_URL = "https://github.com/Geethaa19/Hello-World.wiki.git"
+pat = input()
+GITLAB_WIKI_URL = "https://Geethaa19:"+pat+"@github.com/Hello-World.wiki.git"
+
 CSV_FILE_NAME = "data.csv"  # Name of the CSV file to be generated
 WIKI_PAGE_NAME = "Home.md"  # Name of the Wiki page to update
 CLONE_DIR = "gitlab_wiki_repo"  # Temporary directory to clone the Wiki repository
