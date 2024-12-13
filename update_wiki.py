@@ -2,13 +2,13 @@ import csv
 import requests
 
 import pandas as pd
-
+hi = 2
 # Create the DataFrame
 runners_df = pd.DataFrame({
-    "No. of jobs running during the duration": 12,
-    "Average Execution Time": 11,
-    "Average Queue Time": 22,
-    "Number of Failed Jobs": 33
+    "No. of jobs running during the duration": hi,
+    "Average Execution Time": hi,
+    "Average Queue Time": hi,
+    "Number of Failed Jobs": hi
 })
 
 # Save to CSV
