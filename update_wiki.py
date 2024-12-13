@@ -1,38 +1,35 @@
 import csv
 import requests
 
-# Replace with your repository, token, and base URL
-GITHUB_USERNAME = "Geethaa19"
-REPOSITORY_NAME = "Hello-World"
-TOKEN = input("Enter token")
-BASE_URL = f"https://github.com/{GITHUB_USERNAME}/{REPOSITORY_NAME}/wiki"  
+import pandas as pd
 
-def update_wiki_page(title, content):
-    url = f"{BASE_URL}/Home"  # URL for the wiki page
-    headers = {
-        "Authorization": f"Bearer {TOKEN}",
-        "Content-Type": "application/json",
-    }
-    payload = {
-        "message": f"Updated {title} page",
-        "content": content,
-    }
-    response = requests.put(url, json=payload, headers=headers)
+# Create the DataFrame
+runners_df = pd.DataFrame({
+    "No. of jobs running during the duration": 12,
+    "Average Execution Time": 11,
+    "Average Queue Time": 22,
+    "Number of Failed Jobs": 33
+})
 
-    if response.status_code in [200, 201]:
-        print(f"Successfully updated page: {title}")
-    else:
-        print(f"Failed to update page: {title}. Response: {response.text}")
+# Save to CSV
+csv_file_path = "runners.csv"
+runners_df.to_csv(csv_file_path, index=False)
 
-def main():
-    csv_file = "example.csv"  # Your CSV file path
+# Convert to Markdown
+def csv_to_markdown(input_csv, output_md):
+    # Read the CSV file
+    df = pd.read_csv(input_csv)
+    
+    # Convert DataFrame to Markdown format
+    markdown = df.to_markdown(index=False)
 
-    with open(csv_file, newline='', encoding="utf-8") as file:
-        reader = csv.DictReader(file)
-        for row in reader:
-            title = row["Title"]
-            content = row["Content"]
-            update_wiki_page(title, content)
+    # Save to .md file
+    with open(output_md, 'w') as md_file:
+        md_file.write(markdown)
 
-if __name__ == "__main__":
-    main()
+    print(f"Markdown table has been saved to {output_md}")
+
+# Example usage
+markdown_file_path = "runners.md"
+csv_to_markdown(csv_file_path, markdown_file_path)
+
