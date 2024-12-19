@@ -69,10 +69,10 @@ markdown_file_path1 = "runners1.md"
 markdown_file_path2 = "runners2.md"
 markdown_file_path3 = "runners3.md"
 markdown_file_path4 = "runners4.md"
-csv_to_markdown(csv_file_path, markdown_file_path1)
-csv_to_markdown(csv_file_path, markdown_file_path2)
-csv_to_markdown(csv_file_path, markdown_file_path3)
-csv_to_markdown(csv_file_path, markdown_file_path4)
+csv_to_markdown(csv_file_path1, markdown_file_path1)
+csv_to_markdown(csv_file_path2, markdown_file_path2)
+csv_to_markdown(csv_file_path3, markdown_file_path3)
+csv_to_markdown(csv_file_path4, markdown_file_path4)
 
 wiki_repo_url = "https://github.com/Geethaa19/Hello-World.wiki.git"  # Replace with your Wiki repo URL
 publish_to_github_wiki(wiki_repo_url, markdown_file_path1)
