@@ -14,9 +14,14 @@ runners_df = pd.DataFrame({
 })
 
 # Save to CSV
-csv_file_path = "runners.csv"
-runners_df.to_csv(csv_file_path, index=False)
-
+csv_file_path1 = "runners1.csv"
+csv_file_path2 = "runners2.csv"
+csv_file_path3 = "runners3.csv"
+csv_file_path4 = "runners4.csv"
+runners_df.to_csv(csv_file_path1, index=False)
+runners_df.to_csv(csv_file_path2, index=False)
+runners_df.to_csv(csv_file_path3, index=False)
+runners_df.to_csv(csv_file_path4, index=False)
 # Convert to Markdown
 def csv_to_markdown(input_csv, output_md):
     # Read the CSV file
@@ -60,10 +65,15 @@ def publish_to_github_wiki(wiki_repo_url, md_file_path, commit_message="Update W
 
 
 # Example usage
-markdown_file_path = "runners.md"
+markdown_file_path1 = "runners1.md"
+markdown_file_path2 = "runners2.md"
+markdown_file_path3 = "runners3.md"
+markdown_file_path4 = "runners4.md"
 csv_to_markdown(csv_file_path, markdown_file_path)
 
 wiki_repo_url = "https://github.com/Geethaa19/Hello-World.wiki.git"  # Replace with your Wiki repo URL
-md_file_path = "runners.md"  # Path to your .md file
-publish_to_github_wiki(wiki_repo_url, md_file_path)
+publish_to_github_wiki(wiki_repo_url, markdown_file_path1)
+publish_to_github_wiki(wiki_repo_url, markdown_file_path2)
+publish_to_github_wiki(wiki_repo_url, markdown_file_path3)
+publish_to_github_wiki(wiki_repo_url, markdown_file_path4)
 
