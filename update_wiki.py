@@ -74,9 +74,9 @@ csv_to_markdown(csv_file_path2, markdown_file_path2)
 csv_to_markdown(csv_file_path3, markdown_file_path3)
 csv_to_markdown(csv_file_path4, markdown_file_path4)
 
-wiki_repo_url = "https://github.com/Geethaa19/Hello-World.wiki.git"  # Replace with your Wiki repo URL
-publish_to_github_wiki(wiki_repo_url, markdown_file_path1)
-publish_to_github_wiki(wiki_repo_url, markdown_file_path2)
-publish_to_github_wiki(wiki_repo_url, markdown_file_path3)
-publish_to_github_wiki(wiki_repo_url, markdown_file_path4)
+# wiki_repo_url = "https://github.com/Geethaa19/Hello-World.wiki.git"  # Replace with your Wiki repo URL
+# publish_to_github_wiki(wiki_repo_url, markdown_file_path1)
+# publish_to_github_wiki(wiki_repo_url, markdown_file_path2)
+# publish_to_github_wiki(wiki_repo_url, markdown_file_path3)
+# publish_to_github_wiki(wiki_repo_url, markdown_file_path4)
 
